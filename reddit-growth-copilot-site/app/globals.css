@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top, rgba(118, 167, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 85% 15%, rgba(61, 220, 151, 0.12), transparent 24%),
+    linear-gradient(180deg, #05070d 0%, #0a1120 55%, #05070d 100%);
+  color: #f4f7fb;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Satoshi", "Avenir Next", "Segoe UI", sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  a,
+  button {
+    @apply transition duration-200 ease-out;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border border-white/10 bg-white/[0.04] shadow-panel backdrop-blur;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.24em] text-slate-300;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold text-white sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply max-w-3xl text-base leading-7 text-slate-300 sm:text-lg;
+  }
+}

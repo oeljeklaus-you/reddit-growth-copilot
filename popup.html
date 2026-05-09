@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit Growth Copilot</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="popup">
+    <div class="settings-wrap">
+      <button class="settings-btn rgc-settings-button" id="openSettingsBtn" type="button" aria-label="Open settings" title="Settings">
+        ⚙
+      </button>
+      <div class="settings-menu rgc-settings-menu" id="settingsMenu" hidden>
+        <button class="settings-menu-item" id="tutorialMenuItem" type="button">Tutorial</button>
+        <button class="settings-menu-item" id="clearCacheMenuItem" type="button">Clear cache</button>
+        <button class="settings-menu-item" id="developerToolsMenuItem" type="button" hidden>Developer tools</button>
+      </div>
+    </div>
+
+    <section class="summary-card" id="summaryCard" hidden>
+      <div class="summary-label">Last Analysis</div>
+      <div id="summaryContent" class="summary-content"></div>
+    </section>
+
+    <button class="panel-btn" id="togglePanelBtn" type="button">
+      <span id="toggleBtnText">Show Panel</span>
+    </button>
+    <div class="panel-hint" id="panelHint" hidden>
+      Open a Reddit post to show the panel.
+    </div>
+  </main>
+
+  <script src="analytics.js"></script>
+  <script src="calibration-helper.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

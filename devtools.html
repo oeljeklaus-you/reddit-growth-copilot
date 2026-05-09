@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RGC Developer Tools</title>
+  <link rel="stylesheet" href="devtools.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Reddit Growth Copilot</p>
+        <h1>Developer tools</h1>
+        <p class="subhead">Inspect local state used by the extension.</p>
+      </div>
+      <button id="refreshBtn" class="btn btn-secondary" type="button">Refresh</button>
+    </header>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Storage snapshot</h2>
+        <p>Read-only view of the most relevant extension keys.</p>
+      </div>
+      <pre id="state" class="state">Loading…</pre>
+    </section>
+
+    <section class="card actions">
+      <button id="openOptionsBtn" class="btn btn-primary" type="button">Open Settings</button>
+      <button id="openPopupBtn" class="btn btn-secondary" type="button">Open Popup</button>
+    </section>
+  </main>
+
+  <script src="devtools.js"></script>
+</body>
+</html>

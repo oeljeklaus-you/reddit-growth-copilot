@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit Growth Copilot Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main class="settings-shell">
+    <header class="hero">
+      <div>
+        <h1>Reddit Growth Copilot</h1>
+        <p>Settings for in-page UI behavior.</p>
+      </div>
+      <span class="hero-badge">Settings</span>
+    </header>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>UI</h2>
+        <p>Control what users see on Reddit pages.</p>
+      </div>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Show feed score chips</strong>
+          <small>Display opportunity scores directly on subreddit and home feed posts.</small>
+        </span>
+        <input type="checkbox" id="showFeedScores" />
+      </label>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Show on subreddit feeds</strong>
+          <small>Allow inline score cards on /r/subreddit listing pages.</small>
+        </span>
+        <input type="checkbox" id="showFeedScoresOnSubreddit" />
+      </label>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Show on Reddit home feeds</strong>
+          <small>Allow inline score cards on home / popular / all feeds.</small>
+        </span>
+        <input type="checkbox" id="showFeedScoresOnHome" />
+      </label>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Only show high-opportunity posts</strong>
+          <small>Hide medium / low feed score cards and keep only HIGH ones.</small>
+        </span>
+        <input type="checkbox" id="feedScoreFilterHighOnly" />
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Personalization</h2>
+        <p>Local-only preferences for match scoring.</p>
+      </div>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Enable history personalization</strong>
+          <small>Use your local browsing history to score topic match. Nothing leaves your device.</small>
+        </span>
+        <input type="checkbox" id="enableHistoryPersonalization" />
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Tutorial</h2>
+        <p>Re-run the first-time tutorial when needed.</p>
+      </div>
+      <button id="resetOnboardingBtn" class="btn btn-secondary">Show tutorial again</button>
+    </section>
+
+    <footer class="actions">
+      <button id="resetBtn" class="btn btn-secondary">Reset to defaults</button>
+      <button id="saveBtn" class="btn btn-primary">Save settings</button>
+    </footer>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>
+
